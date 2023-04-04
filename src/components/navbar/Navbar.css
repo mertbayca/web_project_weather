@@ -30,6 +30,11 @@ nav {
   display: flex;
   font-size: 2rem;
   font-family: var(--font-family);
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .w_welcome {
