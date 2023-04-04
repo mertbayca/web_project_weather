@@ -1,0 +1,27 @@
+.weather {
+    display: flex;
+    justify-content: center;
+}
+
+.w_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 4rem;
+    background: #ffe6b4;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+}
+
+.w_box.cold {
+    background: #87CEFA;
+  }
+
+.w_box h2 {
+    font-family: var(--font-family);
+}
+
+.w_box p {
+    font-family: var(--font-family);
+}

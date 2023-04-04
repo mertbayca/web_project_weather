@@ -2,35 +2,61 @@ nav {
     background: linear-gradient(90deg, rgba(0,0,0,1) 60%, rgba(0,194,203,1) 100%);
     display: flex;
     justify-content: space-between;
-}
-
-.logo img {
-    max-width: 10rem;
-    padding: 1rem;
-    display: flex;
-}
-
-.gradient_text {
-    display:flex;
     align-items: center;
-}
-
-.gradient_text h1 {  
-    display: flex;
-    font-size: 2rem;
-    font-family: var(--font-family);
+    flex-wrap: wrap;
 }
 
 .logo {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    flex-grow: 1;
+}
+  
+
+.logo img {
+  max-width: 10rem;
+  padding: 1rem;
+}
+
+.gradient_text {
+  display:flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.gradient_text h1 {
+  display: flex;
+  font-size: 2rem;
+  font-family: var(--font-family);
 }
 
 .w_welcome {
-    font-family: var(--font-family);
+  font-family: var(--font-family);
+  display: none;
+  color: black;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .w_welcome {
     display: flex;
-    color: black;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .logo {
+    flex-grow: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .gradient_text {
+    flex-grow: 0;
+    width: 100%;
+    justify-content: center;
+  }
 }

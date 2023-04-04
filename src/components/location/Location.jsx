@@ -36,7 +36,7 @@ function Location() {
       <div className="search_bar">
         <input
           type="text"
-          placeholder="Enter location"
+          placeholder="City,Country"
           value={location}
           onChange={handleInputChange}
         />

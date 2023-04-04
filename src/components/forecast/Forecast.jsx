@@ -1,4 +1,5 @@
 import React from "react";
+import './Forecast.css'
 
 function Forecast({ forecastData }) {
   if (!forecastData || !forecastData.list) {
@@ -9,17 +10,23 @@ function Forecast({ forecastData }) {
 
   return (
     <div className="forecast">
-      <h2>5 Day Forecast</h2>
-      <div className="forecast-list">
+      <div className="f_header">
+        <h1>5 Day Forecast</h1>
+      </div>
+      <div className="forecast_list">
         {forecastList.map((forecast) => {
           const forecastDate = new Date(forecast.dt_txt);
           const forecastIcon = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
           return (
-            <div className="forecast-item" key={forecast.dt}>
-              <p>{forecastDate.toLocaleDateString()}</p>
-              <img src={forecastIcon} alt={forecast.weather[0].description} />
-              <p>{forecast.weather[0].description}</p>
-              <p>Temperature: {Math.round(forecast.main.temp - 273.15)}°C</p>
+            <div className="forecast_item" key={forecast.dt}>
+              <div className={`f_box ${Math.round(forecast.main.temp - 273.15) < 10 ? 'cold' : ''}`}>
+                <div className="f_text">
+                  <p>{forecastDate.toLocaleDateString()}</p>
+                  <img src={forecastIcon} alt={forecast.weather[0].description} />
+                  <p>{forecast.weather[0].description}</p>
+                  <p>Temperature: {Math.round(forecast.main.temp - 273.15)}°C</p>
+                </div>
+              </div>
             </div>
           );
         })}
