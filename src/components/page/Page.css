@@ -18,6 +18,8 @@
 
 @media only screen and (max-width: 600px) {
     .p_bg {
+      background-image: url('../../assets/mobilebg.png');
+      background-size: cover;  
       height: 100vh;
     }
   
