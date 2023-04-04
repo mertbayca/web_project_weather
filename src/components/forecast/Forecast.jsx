@@ -16,6 +16,7 @@ function Forecast({ forecastData }) {
       <div className="forecast_list">
         {forecastList.map((forecast) => {
           const forecastDate = new Date(forecast.dt_txt);
+          forecastDate.setDate(forecastDate.getDate() + forecastList.indexOf(forecast) + 1);
           const forecastIcon = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
           return (
             <div className="forecast_item" key={forecast.dt}>

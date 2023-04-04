@@ -38,3 +38,7 @@
     align-items: center;
     justify-content: center;
 }
+
+.f_text p {
+    font-family: var(--font-family);
+}

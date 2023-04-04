@@ -1,6 +1,7 @@
 .p_bg {
     background-image: url('../../assets/bg.png');
     background-size: cover;
+    height: 84vh;
 }
 
 .p_tutorial {
