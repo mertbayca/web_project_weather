@@ -11,7 +11,7 @@ function Weather({ weatherData }) {
 
   return (
     <div className="weather">
-      <div className={`w_box ${temperature < 10 ? 'cold' : ''}`}>
+      <div className={`w_box ${temperature < 10 ? 'cold' : ''} ${weatherData.weather[0].description.includes('rain') ? 'rain' : '' }`}>
         <h2>{weatherData.name}</h2>
         <img src={weatherIcon} alt={weatherData.weather[0].description} />
         <p>{weatherData.weather[0].description}</p>

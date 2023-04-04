@@ -20,7 +20,7 @@ function Forecast({ forecastData }) {
           const forecastIcon = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
           return (
             <div className="forecast_item" key={forecast.dt}>
-              <div className={`f_box ${Math.round(forecast.main.temp - 273.15) < 10 ? 'cold' : ''}`}>
+              <div className={`f_box ${Math.round(forecast.main.temp - 273.15) < 10 ? 'cold' : ''} ${forecast.weather[0].description.includes('rain') ? 'rain' : '' }`}>
                 <div className="f_text">
                   <p>{forecastDate.toLocaleDateString()}</p>
                   <img src={forecastIcon} alt={forecast.weather[0].description} />

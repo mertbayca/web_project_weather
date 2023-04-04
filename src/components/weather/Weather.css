@@ -16,7 +16,11 @@
 
 .w_box.cold {
     background: #87CEFA;
-  }
+}
+
+.w_box.rain {
+    background: #cacaca;
+}
 
 .w_box h2 {
     font-family: var(--font-family);

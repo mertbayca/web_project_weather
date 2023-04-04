@@ -1,6 +1,7 @@
 .forecast_list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .f_header {
@@ -26,10 +27,15 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     margin: 1rem;
+    min-width: 160px;
 }
 
 .f_box.cold {
     background: #87CEFA;
+}
+
+.f_box.rain {
+    background: #cacaca;
 }
 
 .f_text {
@@ -42,3 +48,4 @@
 .f_text p {
     font-family: var(--font-family);
 }
+

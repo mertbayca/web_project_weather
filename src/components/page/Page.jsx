@@ -7,6 +7,7 @@ import Forecast from '../forecast/Forecast'
 
 const Page = () => {
   return (
+    <div class="bg-image">
     <div className="p_bg">
       <div className="p_tutorial">
        <h1>Enter a location in the format of city, country <span>&#40;</span>For example London,UK<span>&#41;</span></h1>
@@ -14,6 +15,7 @@ const Page = () => {
         <Location />
         <Weather />
         <Forecast />
+    </div>
     </div>
   )
 }
